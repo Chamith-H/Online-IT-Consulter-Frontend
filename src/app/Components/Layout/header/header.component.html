@@ -20,23 +20,23 @@
 
     <div *ngIf="expandAccount" class="Account-Status">
         <div *ngIf="defaultAction" class="Login">
-            <div class="row g-0 pe-3">
-                <div class="col-9">
+            <div class="row g-0 ps-3 ps-sm-0 pe-3">
+                <div class="col-0 col-sm-6 col-md-7 col-lg-8 col-xl-9">
 
                 </div>
 
-                <div class="col-3 bg-light pt-5 pb-3 px-4 Form-Box">
+                <div class="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 bg-light pt-5 pb-3 px-3 Form-Box">
                     <form #login="ngForm" (ngSubmit)="onSubmit_Login(login)">
                         <h4 class="mb-3">Sign-in</h4>
 
                         <div class="Form-Field">
                             <label for="email">Email</label>
-                            <input type="text" name="email" ngModel>
+                            <input type="text" name="email" placeholder="Your email" ngModel>
                         </div>
 
                         <div class="Form-Field mt-2 mb-3">
                             <label for="password">Password</label>
-                            <input type="text" name="password" ngModel>
+                            <input type="text" name="password" placeholder="Your password" ngModel>
                         </div>
                         
                         
@@ -54,28 +54,28 @@
 
                 </div>
 
-                <div class="col-3 bg-light pt-5 pb-3 px-4 Form-Box">
+                <div class="col-3 bg-light pt-5 pb-3 px-3 Form-Box">
                     <form #register="ngForm" (ngSubmit)="onSubmit_Register(register)">
                         <h4 class="mb-3">Sign-up</h4>
 
                         <div class="Form-Field">
                             <label for="name">Name</label>
-                            <input type="text" name="name" ngModel>
+                            <input type="text" name="name" placeholder="Your name" ngModel>
                         </div>
 
                         <div class="Form-Field mt-2">
                             <label for="email">Email</label>
-                            <input type="text" name="email" ngModel>
+                            <input type="text" name="email" placeholder="Your email" ngModel>
                         </div>
 
                         <div class="Form-Field mt-2">
                             <label for="password">Password</label>
-                            <input type="text" name="password" ngModel>
+                            <input type="text" name="password" placeholder="Your password" ngModel>
                         </div>
                         
                         <div class="Form-Field mt-2 mb-3">
                             <label for="confirm">Confirm Password</label>
-                            <input type="text" name="confirm" ngModel>
+                            <input type="text" name="confirm" placeholder="Confirm password" ngModel>
                         </div>
 
                         <button class="Log-Action" type="submit">Sign up</button>

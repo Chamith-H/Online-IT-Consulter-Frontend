@@ -26,7 +26,7 @@ export class HeaderComponent {
   }
 
   public async onSubmit_Register(form: NgForm) {
-    this.request.register(form.value)
+    await this.request.register(form.value)
       .subscribe(
         (reponse) => console.log(reponse),
         (error) => console.log(error)

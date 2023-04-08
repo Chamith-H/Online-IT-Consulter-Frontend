@@ -14,7 +14,7 @@ export class NavbarComponent {
                       },
 
                       {
-                        title:'Need a Help',
+                        title:'Need a Guide',
                         class:'Help',
                         image:'bi bi-binoculars-fill',
                       },

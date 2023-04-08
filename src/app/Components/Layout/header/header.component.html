@@ -20,13 +20,13 @@
 
     <div *ngIf="expandAccount" class="Account-Status">
         <div *ngIf="defaultAction" class="Login">
-            <div class="row g-0 ps-3 ps-sm-0 pe-3">
+            <div class="row g-0 ps-sm-0 pe-sm-3">
                 <div class="col-0 col-sm-6 col-md-7 col-lg-8 col-xl-9">
 
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 bg-light pt-5 pb-3 px-3 Form-Box">
-                    <form #login="ngForm" (ngSubmit)="onSubmit_Login(login)">
+                    <form #login="ngForm" (ngSubmit)="onSubmit_Login(login)" class="px-4 px-sm-0">
                         <h4 class="mb-3">Sign-in</h4>
 
                         <div class="Form-Field">
@@ -34,7 +34,7 @@
                             <input type="text" name="email" placeholder="Your email" ngModel>
                         </div>
 
-                        <div class="Form-Field mt-2 mb-3">
+                        <div class="Form-Field mt-3 mb-4">
                             <label for="password">Password</label>
                             <input type="text" name="password" placeholder="Your password" ngModel>
                         </div>
@@ -49,13 +49,13 @@
         </div>
 
         <div *ngIf="!defaultAction" class="Login">
-            <div class="row g-0 ps-3 ps-sm-0 pe-3">
+            <div class="row g-0 ps-sm-0 pe-sm-3">
                 <div class="col-0 col-sm-6 col-md-7 col-lg-8 col-xl-9">
 
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 bg-light pt-5 pb-3 px-3 Form-Box">
-                    <form #register="ngForm" (ngSubmit)="onSubmit_Register(register)">
+                    <form #register="ngForm" (ngSubmit)="onSubmit_Register(register)" class="px-4 px-sm-0">
                         <h4 class="mb-3">Sign-up</h4>
 
                         <div class="Form-Field">
@@ -63,17 +63,17 @@
                             <input type="text" name="name" placeholder="Your name" ngModel>
                         </div>
 
-                        <div class="Form-Field mt-2">
+                        <div class="Form-Field mt-3">
                             <label for="email">Email</label>
                             <input type="text" name="email" placeholder="Your email" ngModel>
                         </div>
 
-                        <div class="Form-Field mt-2">
+                        <div class="Form-Field mt-3">
                             <label for="password">Password</label>
                             <input type="text" name="password" placeholder="Your password" ngModel>
                         </div>
                         
-                        <div class="Form-Field mt-2 mb-3">
+                        <div class="Form-Field mt-3 mb-4">
                             <label for="confirm">Confirm Password</label>
                             <input type="text" name="confirm" placeholder="Confirm password" ngModel>
                         </div>

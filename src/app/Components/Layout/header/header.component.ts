@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ApiService } from 'src/app/Requests/api.service';
+import { CurrentUser } from 'src/app/Informations/CurrentUser';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,8 @@ import { ApiService } from 'src/app/Requests/api.service';
 })
 export class HeaderComponent {
   constructor(private request: ApiService) { }
+
+  public statusCode = {status:"", error:{type:''}}
 
   public expandAccount = false
   public defaultAction = true
@@ -21,15 +24,22 @@ export class HeaderComponent {
     this.defaultAction = !this.defaultAction
   }
 
-  onSubmit_Login(form: NgForm) {
-    console.log(form.value)
+  public onSubmit_Login(form: NgForm) {
+    this.request.login(form.value).subscribe(
+      async(response:any) => {
+        this.statusCode = await response
+        await new CurrentUser(response.Id, response.Name, response.Email)
+        console.log("User saved")
+      },
+
+      (error:any) => this.statusCode = error,
+    )
   }
 
-  public async onSubmit_Register(form: NgForm) {
-    await this.request.register(form.value)
-      .subscribe(
-        (reponse) => console.log(reponse),
-        (error) => console.log(error)
-      )
+  public onSubmit_Register(form: NgForm) {
+    this.request.register(form.value).subscribe(
+      (reponse) => console.log(reponse),
+      (error) => console.log(error)
+    )
   }
 }

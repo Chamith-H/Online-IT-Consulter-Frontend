@@ -15,9 +15,9 @@
     </div>
 
     <div class="row g-0">
-        <div class="col-3">
+        <div class="col-3 bg-light">
             <div class="Side-Bar sticky-top">
-                <div class="Selections ps-5 pt-3">
+                <div class="Selections ps-4 ps-lg-5 pt-3">           
                     <h6>All Ads</h6>
                     
                     <div *ngFor="let category of categories; let i=index">
@@ -25,7 +25,7 @@
                             <h6 type="button" (click)="expand_Category(i)">{{category.title}}</h6>
 
                             <div *ngIf="selectedCategory == i && expand">
-                                <div>
+                                <div class="pb-3">
                                     <div *ngFor="let subCategory of subCategories; let j=index">
                                         <div class="Sub-Category" type="button" (click)="view_Posts(i, j)">
                                             <img src={{subCategory.image}} alt="">
@@ -41,7 +41,7 @@
         </div>
 
         <div class="col-9">
-            <div class="Post-Bar px-5">
+            <div class="Post-Bar px-5 bg-white">
                 <h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1><h1>HH</h1>
             </div>
         </div>
